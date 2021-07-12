@@ -5,13 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<div th:each="album:${album}">
-    <p th:text="'Title:  '+'   '+${album.title}"></p>
-    <p th:text="${'artist:  '+'  '+album.artist}"></p>
-    <p th:text="${'songCount:  '+'  '+album.songCount}"></p>
-    <p th:text="'sec:  '+'   '+${album.length}"></p>
-    <img th:src="@{${album.imageUrl}}"/>
-</div>
+    <div th:each="album:${album}">
+        <p th:text="'Title:  '+'   '+${album.title}"></p>
+        <p th:text="${'artist:  '+'  '+album.artist}"></p>
+        <p th:text="${'songCount:  '+'  '+album.songCount}"></p>
+        <p th:text="'sec:  '+'   '+${album.length}"></p>
+        <p th:text="${'AlbumId:  '+' '+album.id}"></p>
+        <img th:src="@{${album.imageUrl}}"/>
+
+    </div>
 
 </body>
 </html>
