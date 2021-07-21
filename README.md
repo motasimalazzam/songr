@@ -14,11 +14,26 @@ This lab about how to set up a basic webapp that bult with the Spring MVC Data a
 
 ### Routers: 
 
+
+
 #### MainController Class
+
+##### [http://localhost:8080/hello](http://localhost:8080/hello)
 
 * `@GetMapping("/hello") String helloWorld()`: Go to the hello.html that contain **Hello world**.
 
-* `@GetMapping("/capitalize/hello") String hello(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model)` : This router go to the HelloWorld.html page and this router contain `name` parameter, so in the html page it will render Hello and the name that sort in the `name` parameter in upper case.
+##### [http://localhost:8080/capitalize/hello](http://localhost:8080/capitalize/hello)
+
+* ` @GetMapping("/capitalize/{id}") String hello(Model model, @PathVariable("id") String id)`: This router go to the HelloWorld.html page and this router contain `id` parameter, so in the html page it will render the text that store in the `id` parameter in upper case. 
+
+##### [http://localhost:8080/](http://localhost:8080/)
+
+* This is route for home page (root page).
+
+
+#### AlbumController Class
+
+##### [http://localhost:8080/albums](http://localhost:8080/albums) 
 
 * `@GetMapping("/albums") public String albums( Model model)` : This router go to the album.html page and this page contains the albums.
 
