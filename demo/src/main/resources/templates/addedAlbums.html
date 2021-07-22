@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <h1>Add Your Album</h1>
+    <div>
+        <form class="form-style-9" action="/albums" method="post">
+            <ul>
+                <li>
+                    <input type="text" name="title" class="field-style field-split align-left" placeholder="Title" required="required"/>
+                    <input type="text" name="artist" class="field-style field-split align-right" placeholder="Artist"required="required" />
+
+                </li>
+                <li>
+                    <input type="number" name="songCount" class="field-style field-split align-left" placeholder="songCount" required="required" />
+                    <input type="number" name="length" class="field-style field-split align-right" placeholder="length" required="required" />
+                </li>
+                <li>
+                    <input type="text" name="imageUrl" class="field-style field-full align-none" placeholder="Image URL" required="required" />
+                </li>
+                <li>
+                    <input type="submit" value="Add ALBUM" />
+                </li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+</html>

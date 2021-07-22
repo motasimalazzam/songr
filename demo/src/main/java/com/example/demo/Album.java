@@ -15,6 +15,11 @@ private Long id;
         return id;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+
     private String title;
     private String artist;
     private int songCount;
@@ -61,6 +66,9 @@ private Long id;
 
     public void setLength(long length) {
         this.length = length;
+    }
+    public long getId() {
+        return id;
     }
 
     public String getImageUrl() {
