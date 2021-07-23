@@ -33,15 +33,23 @@ public class AlbumController {
         return "addedAlbums";
     }
 
+
+
     @PostMapping("/albums")
     public RedirectView addAlbum(@RequestParam(value = "title") String title ,
                                  @RequestParam(value= "artist") String artist,
                                  @RequestParam(value="songCount") int songCount,
                                  @RequestParam(value="imageUrl") String imageUrl,
                                  @RequestParam(value="length") long length) {
-        Album album = new Album(title,artist,songCount,length,imageUrl);
+//        try {
+            Album album = new Album(title,artist,songCount,length,imageUrl);
 
-        albumRepository.save(album);
-        return  new RedirectView("/albums");
+            albumRepository.save(album);
+            return  new RedirectView("/albums");
+//        }catch (Exception e){
+//            return new RedirectView("/erro");
+
+//        }
+
     }
 }

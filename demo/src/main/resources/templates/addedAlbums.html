@@ -7,6 +7,37 @@
 
 
 </head>
+
+<header>
+    <div class="navbar" th:fragment="header">
+
+        <ul class="nav navbar-nav">
+            <li>
+                <a class="navbar-brand" href="/">Home Page</a>
+            </li>
+            <li>
+                <a class="navbar-brand" href="/hello">Hello Page</a>
+            </li>
+            <li>
+                <a href="/capitalize/hello" >Capitalize</a>
+            </li>
+            <li>
+                <a href="/albums" >Albums</a>
+            </li>
+            <li>
+                <a href="/addAlbum" >Add your Album</a>
+            </li>
+            <li>
+                <a href="/songs" >Your songs</a>
+            </li>
+            <li>
+                <a href="/addSong" >Add Songs</a>
+            </li>
+        </ul>
+
+
+    </div>
+</header>
 <body>
     <h1>Add Your Album</h1>
     <div>
@@ -14,7 +45,7 @@
             <ul>
                 <li>
                     <input type="text" name="title" class="field-style field-split align-left" placeholder="Title" required="required"/>
-                    <input type="text" name="artist" class="field-style field-split align-right" placeholder="Artist"required="required" />
+                    <input type="text" name="artist" class="field-style field-split align-right" placeholder="Artist" required="required" />
 
                 </li>
                 <li>
