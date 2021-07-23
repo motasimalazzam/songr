@@ -95,7 +95,8 @@ spring.jpa.hibernate.ddl-auto=create-drop
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
-spring.sql.init.platform=postgres```
+spring.sql.init.platform=postgres
+```
 
 3. You should run the POSTGRESQL on the trminal by using these commands"
 
@@ -110,5 +111,19 @@ spring.sql.init.platform=postgres```
    * \dt 
 
    * select * from album;
+ 
+ ## Lab-13: Related Resources and Integration Testing
 
-   
+### Overview
+
+The requirement for this lab is how the user can add a song to the specific album by fill the forms.
+
+### Router: 
+
+#### [http://localhost:8080/addSong](http://localhost:8080/addSong)
+
+* This route is for **added song** page. The page contains a form to add a song to the specific album by fill it by the user.
+
+### [http://localhost:8080/songs](http://localhost:8080/songs)
+
+* This route for **song** page. The page contains the songs that are added by the user.

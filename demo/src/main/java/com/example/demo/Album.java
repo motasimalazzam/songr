@@ -1,9 +1,7 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -34,6 +32,12 @@ private Long id;
         this.songCount = songCount;
         this.length = length;
         this.imageUrl = imageUrl;
+    }
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+    private List<Song> songs;
+
+    public List<Song> getSongs() {
+        return songs;
     }
 
     public String getTitle() {
